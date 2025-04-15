@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, #87cefa, #f1e7f6); /* 背景 */
+  z-index: -2;
+}
+
+.sakura-petal {
+  position: absolute;
+  background-color: #ffb3b3;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: sakuraFall 5s infinite ease-in-out;
+}
+
+@keyframes sakuraFall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}

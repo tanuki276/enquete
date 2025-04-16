@@ -25,6 +25,7 @@ p {
   max-width: 500px;
   margin: 0 auto;
   margin-top: 2em;
+  box-sizing: border-box; /* 幅が最大500pxに収まるようにする */
 }
 
 input {

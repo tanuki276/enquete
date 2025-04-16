@@ -1,5 +1,7 @@
-document.querySelector("form").addEventListener("submit", function() {
+function showThanksMessage(event) {
+  event.preventDefault();
   setTimeout(() => {
-    document.getElementById("thanksMsg").style.display = "block";
+    document.querySelector("form").style.display = "none";  
+    document.getElementById("thanksMsg").style.display = "block"; 
   }, 1000);
-});
+}

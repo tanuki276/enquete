@@ -1,49 +1,59 @@
 body {
-  font-family: sans-serif;
-  padding: 2em;
-  background: #f0f8ff;
-  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
 }
 
 h1 {
-  color: #333;
-  margin-bottom: 1em;
+  color: #4CAF50;
 }
 
 p {
-  color: #666;
+  color: #555;
+  font-size: 1rem;
 }
 
-.form-container {
-  display: inline-block;
+form {
   background-color: #ffffff;
-  border: 2px solid #4CAF50;
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
   border-radius: 8px;
-  padding: 2em;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  margin-top: 2em;
-  box-sizing: border-box; /* 幅が最大500pxに収まるようにする */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 
-input {
-  padding: 8px;
+label {
+  font-size: 1rem;
+  color: #555;
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input[type="text"] {
   width: 100%;
-  margin: 5px 0;
-  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
   border-radius: 4px;
+  margin-bottom: 15px;
 }
 
 button {
-  padding: 10px 20px;
   background-color: #4CAF50;
   color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
   border: none;
-  cursor: pointer;
-  margin-top: 10px;
   border-radius: 4px;
+  cursor: pointer;
   width: 100%;
 }
 
@@ -52,7 +62,10 @@ button:hover {
 }
 
 #thanksMsg {
-  margin-top: 20px;
-  font-size: 1.2em;
-  color: #4CAF50;
+  text-align: center;
+  margin-top: 30px;
+}
+
+iframe {
+  display: none;
 }

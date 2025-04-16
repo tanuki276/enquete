@@ -2,13 +2,27 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animation</title>
+  <title>ゲームアンケート</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="background"></div>
-  <div class="sakura"></div>
+  <h1>ゲームアンケート</h1>
+  <p>※本名を入力しないでください。</p>
+
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSe7eI8ZNx8vWAVCsYW6-7PVkF-5m2tppIpCSDM8TKvUx4EV_g/formResponse" method="POST" target="dummyFrame">
+    <label>名前（ニックネーム）:<br>
+      <input type="text" name="entry.383056709" required>
+    </label><br><br>
+
+    <label>好きなゲーム:<br>
+      <input type="text" name="entry.1830024889" required>
+    </label><br><br>
+
+    <button type="submit">送信</button>
+  </form>
+
+  <iframe name="dummyFrame" style="display:none;"></iframe>
+  <p id="thanksMsg" style="display:none;">送信ありがとうございます！</p>
 
   <script src="script.js"></script>
 </body>

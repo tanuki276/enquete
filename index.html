@@ -3,34 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>アンケート</title>
+  <title>アンケートフォーム</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>アンケート</h1>
-  <p>※本名を入力しないでください。</p>
+  <h1>アンケートフォーム</h1>
+  <form id="surveyForm">
+    <label for="name">名前（ニックネーム）:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
 
-  <!-- フォーム -->
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSe7eI8ZNx8vWAVCsYW6-7PVkF-5m2tppIpCSDM8TKvUx4EV_g/formResponse" method="POST" target="dummyFrame" onsubmit="showThanksMessage(event)">
-    <label>名前（ニックネーム）:<br>
-      <input type="text" name="entry.383056709" required>
-    </label><br><br>
-
-    <label>好きなゲーム:<br>
-      <input type="text" name="entry.1830024889" required>
-    </label><br><br>
+    <label for="game">好きなゲーム:</label><br>
+    <input type="text" id="game" name="game" required><br><br>
 
     <button type="submit">送信</button>
   </form>
 
-  <!-- 完了メッセージ -->
   <div id="thanksMsg" style="display:none;">
     <h2>送信ありがとうございました！</h2>
     <p>ご協力いただきありがとうございます。</p>
   </div>
-
-  <!-- 隠し用のiframe -->
-  <iframe name="dummyFrame" style="display:none;"></iframe>
 
   <script src="script.js"></script>
 </body>

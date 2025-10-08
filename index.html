@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>アンケートフォーム</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>元号予想</title>
 </head>
 <body>
-  <h1>アンケートフォーム</h1>
-  <form id="surveyForm">
-    <label for="name">名前（ニックネーム）:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
+<h1>元号予想2025.10.8.</h1>
+<input type="file" id="fileInput" accept=".txt">
+<pre id="fileContent" style="white-space: pre-wrap; border:1px solid #ccc; padding:10px;"></pre>
 
-    <label for="game">好きなゲーム:</label><br>
-    <input type="text" id="game" name="game" required><br><br>
+<script>
+document.getElementById('fileInput').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (!file) return;
 
-    <button type="submit">送信</button>
-  </form>
-
-  <div id="thanksMsg" style="display:none;">
-    <h2>送信ありがとうございました！</h2>
-    <p>ご協力いただきありがとうございます。</p>
-  </div>
-
-  <script src="script.js"></script>
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        document.getElementById('fileContent').textContent = e.target.result;
+    };
+    reader.readAsText(file, 'UTF-8');
+});
+</script>
 </body>
 </html>

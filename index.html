@@ -9,7 +9,7 @@
 <pre id="fileContent" style="white-space: pre-wrap; border:1px solid #ccc; padding:10px;"></pre>
 
 <script>
-fetch('gengo_combinations_extended.txt')
+fetch('kanji_400_combinations.txt')
   .then(response => {
     if (!response.ok) throw new Error('ファイルが読み込めませんでした');
     return response.text();
